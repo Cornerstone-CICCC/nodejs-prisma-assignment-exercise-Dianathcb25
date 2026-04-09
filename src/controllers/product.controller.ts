@@ -18,6 +18,7 @@ const getProductById = async (req: Request, res: Response) => {
 
   try {
     const product = await productModel.fetchOne(Number(id));
+
     if (!product) {
       res.status(404).json({ message: 'Cannot find product.' });
       return;

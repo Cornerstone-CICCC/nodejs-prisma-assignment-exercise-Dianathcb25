@@ -8,7 +8,7 @@ const fetchAll = async () => {
 
 //Get by ID
 const fetchOne = async (id: number) => {
-  await prisma.product.findUnique({
+  return await prisma.product.findUnique({
     where: { id },
   });
 };
